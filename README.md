@@ -3,12 +3,13 @@
 Casks for the Mac apps on [ciroapps.com](https://ciroapps.com):
 
 ```
+brew tap cirorx/tap
 brew trust cirorx/tap
 brew install --cask cirorx/tap/droidview
 brew install --cask cirorx/tap/quire
 ```
 
-Homebrew 7 loads casks from a third-party tap only once you trust it, hence the first line.
+Homebrew 7 loads casks from a third-party tap only once it is tapped and trusted, hence the first two lines.
 
 | cask | app | also installs |
 |---|---|---|
