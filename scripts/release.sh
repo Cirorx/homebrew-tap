@@ -1,6 +1,6 @@
 #!/bin/bash
 # Builds one app, zips it into ciroapps-site/public/downloads, and points its cask at the new zip
-# (version and SHA-256). The site and app repos sit next to this one in ~/Documents/coding.
+# (version and SHA-256). The site and app repos are expected to sit next to this one.
 #
 #   scripts/release.sh droidview
 #   scripts/release.sh quire
