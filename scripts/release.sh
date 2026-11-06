@@ -19,8 +19,8 @@ case "${1:-}" in
     app="${coding}/desktop apps/droidview/macos/build/DroidView.app"
     ;;
   quire)
-    (cd "${coding}/quire" && scripts/build-app.sh)
-    app="${coding}/quire/build/Quire.app"
+    (cd "${coding}/desktop apps/quire" && scripts/build-app.sh)
+    app="${coding}/desktop apps/quire/build/Quire.app"
     ;;
   reclaim)
     (cd "${coding}/desktop apps/Reclaim" && ./build.sh --release)
