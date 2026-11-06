@@ -1,6 +1,6 @@
 cask "reclaim" do
-  version "1.2.0"
-  sha256 "16123036231bed1c0762ae9b529d38bb3b072059ac7535f9c74f417ae23b858a"
+  version "1.3.0"
+  sha256 "247ebd4d434a27d25675adc36e19f4b58565c50ba529ac760eeba0010f88c200"
 
   url "https://ciroapps.com/downloads/Reclaim-#{version}.zip"
   name "Reclaim"
