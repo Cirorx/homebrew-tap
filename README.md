@@ -7,6 +7,7 @@ brew tap cirorx/tap
 brew trust cirorx/tap
 brew install --cask cirorx/tap/droidview
 brew install --cask cirorx/tap/quire
+brew install --cask cirorx/tap/reclaim
 ```
 
 Homebrew 7 loads casks from a third-party tap only once it is tapped and trusted, hence the first two lines.
@@ -15,9 +16,11 @@ Homebrew 7 loads casks from a third-party tap only once it is tapped and trusted
 |---|---|---|
 | `droidview` | DroidView: the Android emulator in one window, with developer tools and an MCP server | `droidview` (`droidview --mcp` is the MCP server) |
 | `quire` | Quire: a PDF reader that stays responsive on huge books and scans | `quire`, the command line reader |
+| `reclaim` | Reclaim: finds and reclaims regenerable developer disk space, and shows what keeps refilling it | |
 
-Both need an Apple Silicon Mac. They are not notarized yet, so each cask clears the download's
-quarantine flag after installing; without that, macOS refuses to open the app.
+DroidView and Quire need an Apple Silicon Mac; Reclaim is universal. None is notarized yet, so
+each cask clears the download's quarantine flag after installing; without that, macOS refuses
+to open the app.
 
 ## Releasing
 
@@ -25,7 +28,7 @@ The zips are served from ciroapps.com (the site repo's `public/downloads`), not 
 With the app's version bumped in its `Info.plist`:
 
 ```
-scripts/release.sh droidview     # or quire
+scripts/release.sh droidview     # or quire, or reclaim
 ```
 
 That builds the app, zips it into the site's `public/downloads/<App>-<version>.zip` and

@@ -4,6 +4,7 @@
 #
 #   scripts/release.sh droidview
 #   scripts/release.sh quire
+#   scripts/release.sh reclaim
 #
 # Then commit and push the zip in ciroapps-site (which deploys it), and after that the cask here.
 set -euo pipefail
@@ -21,8 +22,12 @@ case "${1:-}" in
     (cd "${coding}/quire" && scripts/build-app.sh)
     app="${coding}/quire/build/Quire.app"
     ;;
+  reclaim)
+    (cd "${coding}/desktop apps/Reclaim" && ./build.sh --release)
+    app="${coding}/desktop apps/Reclaim/dist/Reclaim.app"
+    ;;
   *)
-    echo "usage: $0 droidview|quire" >&2
+    echo "usage: $0 droidview|quire|reclaim" >&2
     exit 2
     ;;
 esac
