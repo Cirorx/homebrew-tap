@@ -1,6 +1,6 @@
 cask "droidview" do
-  version "0.1.0"
-  sha256 "07e6f296a8bbc67b889b32f4c17b5f3224a224c48a92ae467f8a577fc87eac94"
+  version "0.1.1"
+  sha256 "bd5274864f71ab9a2ed4bfa6a6387889b51ab36e8b36be051b099b12d7876c3f"
 
   url "https://ciroapps.com/downloads/DroidView-#{version}.zip"
   name "DroidView"
