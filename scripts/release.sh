@@ -32,8 +32,9 @@ version="$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${app}
 zip="${downloads}/${name}-${version}.zip"
 mkdir -p "${downloads}"
 rm -f "${zip}"
-# ditto keeps the bundle's symlinks, permissions and signature intact; plain zip does not.
-ditto -c -k --sequesterRsrc --keepParent "${app}" "${zip}"
+# ditto keeps the bundle's symlinks, permissions and signature intact. No --sequesterRsrc: its
+# __MACOSX folder of AppleDouble files breaks signature checks and stapling once notarized.
+ditto -c -k --keepParent "${app}" "${zip}"
 sha="$(shasum -a 256 "${zip}" | cut -d' ' -f1)"
 
 cask="${tap}/Casks/$1.rb"
