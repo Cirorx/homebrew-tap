@@ -15,8 +15,8 @@ downloads="${coding}/ciroapps-site/public/downloads"
 
 case "${1:-}" in
   droidview)
-    (cd "${coding}/droidview" && macos/build.sh)
-    app="${coding}/droidview/macos/build/DroidView.app"
+    (cd "${coding}/desktop apps/droidview" && macos/build.sh)
+    app="${coding}/desktop apps/droidview/macos/build/DroidView.app"
     ;;
   quire)
     (cd "${coding}/quire" && scripts/build-app.sh)
