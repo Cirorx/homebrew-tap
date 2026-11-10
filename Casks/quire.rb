@@ -1,6 +1,6 @@
 cask "quire" do
-  version "1.0.0"
-  sha256 "0325f1e7184ddfcea6922a4fef6179061331886322133f526da46c1df7b7b5c9"
+  version "1.0.1"
+  sha256 "0bb0eaf794facd90303656243cfe4e4d140b7524df1c66ff8e13f4a42dddbb3f"
 
   url "https://ciroapps.com/downloads/Quire-#{version}.zip"
   name "Quire"
